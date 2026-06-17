@@ -1,12 +1,11 @@
-export const loginData = [
-    {
+export const loginData = {
+    validUser: {
         username: 'emilys',
         password: 'emilyspass',
-        expectedStatus: 200
-    },
-    {
+    },   
+    invalidUser: {
         username: 'wrong',
         password: 'wrong',
-        expectedStatus: 400
     }
-];
+}
+

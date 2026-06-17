@@ -1,4 +1,5 @@
 import { APIRequestContext } from '@playwright/test';
+import { config } from '../config/env';
 
 export class AuthApi {
 
@@ -6,20 +7,16 @@ export class AuthApi {
         private request: APIRequestContext
     ) {}
 
-    async login(
-        username: string,
-        password: string
-    ) {
+    //login(data: loginData.invalidUser)のモードに適する
+　　async login(user: {
+        username: string;
+        password: string;
+    }) {
         return await this.request.post(
-            'https://dummyjson.com/auth/login',
+            `${config.baseUrl}/auth/login`,
             {
-                data: {
-                    username,
-                    password
-                }
+                data: user
             }
         );
-
-    }
-
+    }　
 }

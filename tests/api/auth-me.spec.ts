@@ -1,10 +1,11 @@
 import { test, expect} from '@playwright/test';
+import { config } from '../../config/env';
 
 test('ユーザー情報取得', async({ request }) => {
 
     const loginResponse =
         await request.post(
-            'https://dummyjson.com/auth/login',
+            `${config.baseUrl}/auth/login`,
             {
                 data: {
                     username: 'emilys',
@@ -19,7 +20,7 @@ test('ユーザー情報取得', async({ request }) => {
 
     const meResponse = 
         await request.get(
-            'https://dummyjson.com/auth/me',
+            `${config.baseUrl}/auth/me`,
             {
                 headers: {
                     Authorization:

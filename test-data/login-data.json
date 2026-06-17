@@ -1,0 +1,23 @@
+{
+    "validUser": {
+        "request": {
+            "username": "emilys",
+            "password": "emilyspass"
+        },
+        "expected": {
+            "status": 200,
+            "username": "emilys",
+            "email": "@x.dummyjson.com",
+            "gender": "female"
+        }  
+    },
+    "invalidUser": {
+        "request": {
+            "username": "wrong",
+            "password": "wrong"
+        },
+        "expected": {
+            "status": 400
+        }
+    }
+}

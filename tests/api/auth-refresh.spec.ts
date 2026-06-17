@@ -1,4 +1,5 @@
 import { test, expect, request } from '@playwright/test';
+import { config } from '../../config/env';
 
 test('refresh token取得', async({ request }) => {
 
@@ -21,7 +22,7 @@ test('refresh token取得', async({ request }) => {
 
     //Refresh token
     const refreshResponse = await request.post(
-        'https://dummyjson.com/auth/refresh',
+        `${config.baseUrl}/auth/refresh`,
         {
             data: {
                 refreshToken
