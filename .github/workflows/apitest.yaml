@@ -8,6 +8,9 @@ jobs:
   test:
     timeout-minutes: 3
     runs-on: ubuntu-latest
+    env: 
+      TEST_ENV: qa
+
     steps:
     - name: Checkout Source
       uses: actions/checkout@v4
@@ -16,13 +19,14 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: 22
+
     - name: Install dependencies
       run: npm ci
 
-    - name: Install Playwright Browsers
+    - name: Install Playwright
       run: npx playwright install --with-deps
 
-    - name: Run Playwright tests
+    - name: Run API tests
       run: npx playwright test
 
     - name: Upload Playwright Report
