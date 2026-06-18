@@ -1,0 +1,13 @@
+{
+    "request": {
+        "firstName": "Taro",
+        "lastName": "Yamada",
+        "age": 28
+    },
+    "expected": {
+        "status": 201,
+        "firstName": "Taro",
+        "lastName": "Yamada",
+        "age": 28
+    }
+}

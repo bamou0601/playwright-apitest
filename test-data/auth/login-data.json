@@ -1,5 +1,7 @@
 {
+    "_comment": "ログインAPIテスト用のテストデータ。正常系と異常系のケースを含みます。",
     "validUser": {
+        "_comment": "正常なユーザー情報を使用したログインリクエストと期待結果です。",
         "request": {
             "username": "emilys",
             "password": "emilyspass"
@@ -9,9 +11,10 @@
             "username": "emilys",
             "email": "@x.dummyjson.com",
             "gender": "female"
-        }  
+        }
     },
     "invalidUser": {
+        "_comment": "不正なユーザー情報を使用したログインリクエストと期待結果です。",
         "request": {
             "username": "wrong",
             "password": "wrong"

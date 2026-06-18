@@ -3,9 +3,11 @@
     "target": "ES2022",
     "module": "CommonJS",
     "moduleResolution": "Node",
-    "types": ["node", "@playwright/test"],
+    "types": [
+      "node",
+      "@playwright/test"
+    ],
     "strict": true,
-    "esModuleInterop": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "esModuleInterop": true

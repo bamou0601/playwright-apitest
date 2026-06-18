@@ -1,0 +1,16 @@
+{
+    "login": {
+        "request": {
+            "username": "emilys",
+            "password": "emilyspass"
+        },
+        "expected": {
+            "status": 200
+        }
+    },
+    "refresh": {
+        "expected": {
+            "status": 200
+        }
+    }
+}
