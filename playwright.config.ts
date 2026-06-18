@@ -34,13 +34,13 @@ export default defineConfig({
  * - .env.stg
  * - .env.prod
  */
-//     dotenv.config({
-//   path: `.env.${process.env.TEST_ENV || 'dev'}`
-// });
+    //     dotenv.config({
+    //   path: `.env.${process.env.TEST_ENV || 'dev'}`
+    // });
 
-// export default defineConfig({
+    // export default defineConfig({
 
-//   use: {
-//     baseURL: process.env.BASE_URL
-//   }
+    //   use: {
+    //     baseURL: process.env.BASE_URL
+    //   }
 });
