@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { AuthApi } from '../../../api/AuthApi';
 import { config } from '../../../config/env';
 import authMeData from '../../../test-data/auth/me-data.json';
 
@@ -14,32 +15,27 @@ import authMeData from '../../../test-data/auth/me-data.json';
 
 test('ユーザー情報取得', async ({ request }) => {
 
-    // ログインしてアクセストークンを取得する
+    // AuthApiクラスのインスタンス生成
+    const authApi = new AuthApi(request);
+
+    // ログインAPI実行
     const loginResponse =
-        await request.post(
-            `${config.baseUrl}/auth/login`,
-            {
-                data: authMeData.login.request,
-            }
+        await authApi.login(
+            authMeData.login.request
         );
 
-    // ログイン成功を確認する
-    expect(loginResponse.status()).toBe(authMeData.login.expected.status);
+    //ステータスコード確認    
+    expect(loginResponse.status())
+        .toBe(authMeData.login.expected.status);
 
     const loginBody = await loginResponse.json();
+
+    // ログインレスポンスからアクセストークンを取得する
     const token = loginBody.accessToken;
 
-    // 取得したアクセストークンで /auth/me を呼び出す
-    const meResponse =
-        await request.get(
-            `${config.baseUrl}/auth/me`,
-            {
-                headers: {
-                    Authorization:
-                        `Bearer ${token}`,
-                },
-            }
-        );
+
+    // 取得したアクセストークンを使ってユーザー情報取得APIを呼び出す
+    const meResponse = await authApi.getMe(token);
 
     // ユーザー情報取得成功を確認する
     expect(meResponse.status()).toBe(authMeData.me.expected.status);

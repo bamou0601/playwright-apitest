@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { AuthApi } from '../../../api/AuthApi';
 import { config } from '../../../config/env';
 import refreshData from '../../../test-data/auth/refresh-data.json';
 
@@ -14,13 +15,11 @@ import refreshData from '../../../test-data/auth/refresh-data.json';
 
 test('refresh token取得', async ({ request }) => {
 
+    // AuthApiクラスのインスタンス生成
+    const authApi = new AuthApi(request);
+
     // ログインしてリフレッシュトークンを取得する
-    const loginResponse = await request.post(
-        `${config.baseUrl}/auth/login`,
-        {
-            data: refreshData.login.request,
-        }
-    );
+    const loginResponse = await authApi.login(refreshData.login.request);
 
     // ログイン成功を確認する
     expect(loginResponse.status()).toBe(refreshData.login.expected.status);
@@ -28,21 +27,14 @@ test('refresh token取得', async ({ request }) => {
     const loginBody = await loginResponse.json();
     const refreshToken = loginBody.refreshToken;
 
+
     // リフレッシュトークンを使用して新しいアクセストークンを取得する
-    const refreshResponse = await request.post(
-        `${config.baseUrl}/auth/refresh`,
-        {
-            data: {
-                refreshToken,
-            },
-        }
-    );
+    const refreshResponse = await authApi.refreshToken(refreshToken);
 
     // リフレッシュ成功を確認する
     expect(refreshResponse.status()).toBe(refreshData.refresh.expected.status);
 
-    const refreshBody =
-        await refreshResponse.json();
+    const refreshBody = await refreshResponse.json();
 
     // 新しいアクセストークンが取得できたことを確認する
     expect(refreshBody.accessToken).toBeTruthy();
