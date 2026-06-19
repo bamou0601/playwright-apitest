@@ -29,29 +29,38 @@ test('正常ログイン', async ({ request }) => {
 
     //ステータスコード確認    
     expect(response.status())
-        .toBe(200);
+        .toBe(loginData.validUser.expected.status);
 
     //レスポンスボディ取得 
     const body = await response.json();
     // console.log(body);
 
     // ユーザー情報検証
+    // オブジェクトのプロパティが存在するかを確認する
     expect(body.id).toBeTruthy();
 
     expect(body.username)
-        .toBe(loginData.validUser.expected.username);
+        .toBe(loginData.validUser.expected.body.username);
 
     expect(body.email)
-        .toContain(loginData.validUser.expected.email);
+        .toContain(loginData.validUser.expected.body.email);
 
     expect(body.gender)
-        .toBe(loginData.validUser.expected.gender);
+        .toBe(loginData.validUser.expected.body.gender);
+
+    //一部のプロパティが一致するかを確認する
+    expect(body).toMatchObject(loginData.validUser.expected.body);
 
     // アクセストークン検証
     expect(body.accessToken).toBeTruthy();
 
     expect(body.accessToken.length).toBe(360)
 
+    // アクセストークンとリフレッシュトークンは動的に生成されるため、値の比較は行わず、存在するかどうかを確認する
+    delete body.accessToken;
+    delete body.refreshToken;
+
+    expect(body).toEqual(loginData.validUser.expected.body);
 });
 
 /**
