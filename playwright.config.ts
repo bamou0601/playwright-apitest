@@ -16,6 +16,13 @@ export default defineConfig({
      */
     testDir: './tests',
 
+    // レポーターの設定: 実行結果を一覧表示し、Allureレポートを生成する
+    reporter: [
+        ['list'],
+        ['html'],
+        ['allure-playwright']
+    ],
+
     /**
      * 実行対象プロジェクト
      * APIテスト用プロジェクト

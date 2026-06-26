@@ -1,5 +1,6 @@
 import { APIRequestContext } from '@playwright/test';
-import { config } from '../config/env';
+//import { config } from '../config/env';
+import { BaseApi } from "./BaseApi";
 
 /**
  * 認証APIを操作するクラス
@@ -7,15 +8,18 @@ import { config } from '../config/env';
  * 作成者: 馬 猛
  * 作成日: 2026/06/17
  */
-export class AuthApi {
+export class AuthApi extends BaseApi {
 
     /**
-    * PlaywrightのAPIRequestContextを受け取る
-    * requestを使ってHTTPリクエストを送信する
+    * BaseApiへAPIRequestContextを渡す
+    *
+    * BaseApiで共通HTTP処理
+    * (Request/Response記録・Allure添付・HTTP通信)
+    * を利用するためのコンストラクタ
     */
-    constructor(
-        private request: APIRequestContext
-    ) { }
+    constructor(request: APIRequestContext) {
+        super(request);
+    }
 
     /**
     * ログインAPI
@@ -28,12 +32,7 @@ export class AuthApi {
         username: string;
         password: string;
     }) {
-        return await this.request.post(
-            `${config.baseUrl}/auth/login`,
-            {
-                data: user
-            }
-        );
+        return this.post("/auth/login", user);
     }
 
     /**
@@ -42,12 +41,10 @@ export class AuthApi {
      * @returns ユーザー情報取得APIのレスポンス
      */
     async getMe(accessToken: string) {
-        return await this.request.get(
-            `${config.baseUrl}/auth/me`,
+        return this.get(
+            "/auth/me",
             {
-                headers: {
-                    Authorization: `Bearer ${accessToken}`
-                }
+                Authorization: `Bearer ${accessToken}`
             }
         );
     }
@@ -58,10 +55,10 @@ export class AuthApi {
      * @returns リフレッシュAPIのレスポンス
      */
     async refreshToken(refreshToken: string) {
-        return await this.request.post(
-            `${config.baseUrl}/auth/refresh`,
+        return this.post(
+            "/auth/refresh",
             {
-                data: { refreshToken }
+                refreshToken
             }
         );
     }

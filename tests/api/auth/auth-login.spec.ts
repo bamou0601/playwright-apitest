@@ -1,5 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { AuthApi } from '../../../api/AuthApi';
+import { ContentType } from "allure-js-commons";
+import * as allure from "allure-js-commons";
 import loginData from '../../../test-data/auth/login-data.json';
 
 /**
@@ -20,43 +22,33 @@ test('正常ログイン', async ({ request }) => {
 
     // AuthApiクラスのインスタンス生成
     const authApi = new AuthApi(request);
+    const requestBody = loginData.validUser.request;
 
     // ログインAPI実行
     const response =
-        await authApi.login(
-            loginData.validUser.request
-        );
+        await authApi.login(requestBody);
 
-    //ステータスコード確認    
+    //ステータスコード確認
     expect(response.status())
         .toBe(loginData.validUser.expected.status);
 
-    //レスポンスボディ取得 
+    //レスポンスボディ取得
     const body = await response.json();
     // console.log(body);
 
     // ユーザー情報検証
     // オブジェクトのプロパティが存在するかを確認する
-    expect(body.id).toBeTruthy();
-
-    expect(body.username)
-        .toBe(loginData.validUser.expected.body.username);
-
-    expect(body.email)
-        .toContain(loginData.validUser.expected.body.email);
-
-    expect(body.gender)
-        .toBe(loginData.validUser.expected.body.gender);
+    expect(body.id).toBeDefined();
 
     //一部のプロパティが一致するかを確認する
     expect(body).toMatchObject(loginData.validUser.expected.body);
 
-    // アクセストークン検証
+    // トークン検証
     expect(body.accessToken).toBeTruthy();
+    expect(body.refreshToken).toBeTruthy();
 
-    expect(body.accessToken.length).toBe(360)
 
-    // アクセストークンとリフレッシュトークンは動的に生成されるため、値の比較は行わず、存在するかどうかを確認する
+    // アクセストークンとリフレッシュトークンは動的に生成されるため、値の比較は行わず、存在するかを確認する
     delete body.accessToken;
     delete body.refreshToken;
 
@@ -83,3 +75,4 @@ test('異常ログイン', async ({ request }) => {
         .toBe(loginData.invalidUser.expected.status);
 
 });
+

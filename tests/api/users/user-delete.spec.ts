@@ -24,7 +24,6 @@ test('ユーザー削除', async ({ request }) => {
 
     const body = await response.json();
 
-    expect(body.isDeleted)
-        .toBeTruthy();
+    expect(body.isDeleted).toBeTruthy();
 
 });
