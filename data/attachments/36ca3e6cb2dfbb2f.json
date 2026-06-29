@@ -1,0 +1,99 @@
+{
+  "Status": 200,
+  "StatusText": "OK",
+  "Duration": "609 ms(0.61 s)",
+  "Headers": {
+    "date": "Mon, 29 Jun 2026 04:53:29 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "transfer-encoding": "chunked",
+    "connection": "keep-alive",
+    "access-control-allow-credentials": "true",
+    "content-encoding": "br",
+    "etag": "W/\"565-e/rV0ZFYH3w2AZ5tupcCwxj0Chw\"",
+    "strict-transport-security": "max-age=15552000; includeSubDomains",
+    "vary": "Origin, Accept-Encoding",
+    "x-content-type-options": "nosniff",
+    "x-dns-prefetch-control": "off",
+    "x-download-options": "noopen",
+    "x-frame-options": "SAMEORIGIN",
+    "x-ratelimit-limit": "100",
+    "x-ratelimit-remaining": "99",
+    "x-ratelimit-reset": "1782708818",
+    "x-xss-protection": "1; mode=block",
+    "cf-cache-status": "DYNAMIC",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=WP7xyT8ej704F3LP%2BdV3luZ05%2BEnoPE0PQ8ZwD7yxBMnOqOt4W2djxfGzpIHg1t1XIqBLgVgtqzkw20MltJKx5lDNhdkJ3x%2F0sRfDAoWu%2BqewLazRLgI7N%2FbFNv7tP1k7S%2FxIpblbKIhBaHw\"}]}",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "server": "cloudflare",
+    "cf-ray": "a13253ecce0162d0-NRT"
+  },
+  "Body": {
+    "id": 2,
+    "firstName": "Hanako",
+    "lastName": "Williams",
+    "maidenName": "",
+    "age": 36,
+    "gender": "male",
+    "email": "michael.williams@x.dummyjson.com",
+    "phone": "+49 258-627-6644",
+    "username": "michaelw",
+    "password": "michaelwpass",
+    "birthDate": "1989-8-10",
+    "image": "https://dummyjson.com/icon/michaelw/128",
+    "bloodGroup": "B+",
+    "height": 186.22,
+    "weight": 76.32,
+    "eyeColor": "Red",
+    "hair": {
+      "color": "Green",
+      "type": "Straight"
+    },
+    "ip": "12.13.116.142",
+    "address": {
+      "address": "385 Fifth Street",
+      "city": "Houston",
+      "state": "Alabama",
+      "stateCode": "AL",
+      "postalCode": "38807",
+      "coordinates": {
+        "lat": 22.815468,
+        "lng": 115.608581
+      },
+      "country": "United States"
+    },
+    "macAddress": "79:15:78:99:60:aa",
+    "university": "Ohio State University",
+    "bank": {
+      "cardExpire": "01/30",
+      "cardNumber": "3530633803003665",
+      "cardType": "JCB",
+      "currency": "USD",
+      "iban": "DE26362283149158045865"
+    },
+    "company": {
+      "department": "Support",
+      "name": "Spinka - Dickinson",
+      "title": "Support Specialist",
+      "address": {
+        "address": "395 Main Street",
+        "city": "Los Angeles",
+        "state": "New Hampshire",
+        "stateCode": "NH",
+        "postalCode": "73442",
+        "coordinates": {
+          "lat": 79.098326,
+          "lng": -119.624845
+        },
+        "country": "United States"
+      }
+    },
+    "ein": "912-602",
+    "ssn": "108-953-962",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/97.0.1072.76 Safari/537.36",
+    "crypto": {
+      "coin": "Bitcoin",
+      "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
+      "network": "Ethereum (ERC20)"
+    },
+    "role": "admin"
+  }
+}

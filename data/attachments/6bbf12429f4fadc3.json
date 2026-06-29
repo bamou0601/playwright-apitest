@@ -1,0 +1,34 @@
+{
+  "Status": 200,
+  "StatusText": "OK",
+  "Duration": "16 ms(0.02 s)",
+  "Headers": {
+    "date": "Mon, 29 Jun 2026 06:08:35 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "transfer-encoding": "chunked",
+    "connection": "keep-alive",
+    "access-control-allow-credentials": "true",
+    "etag": "W/\"2f4-xty9BEMyOLyFaJzxTBznaAStNeY\"",
+    "set-cookie": "accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3ODI3MTMzMTUsImV4cCI6MTc4MjcxNjkxNX0.qIZVGYnUZw1VQC3I4fmBIj7DnbUzA1BRKjSzne_Qgtc; Max-Age=3600; Path=/; Expires=Mon, 29 Jun 2026 07:08:35 GMT; HttpOnly; Secure\nrefreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3ODI3MTMzMTUsImV4cCI6MTc4NTMwNTMxNX0.fe3SSeqW_GCQmVcpPlt_MuSsa69vkME1KCAWHIjqIos; Max-Age=3600; Path=/; Expires=Mon, 29 Jun 2026 07:08:35 GMT; HttpOnly; Secure",
+    "strict-transport-security": "max-age=15552000; includeSubDomains",
+    "vary": "Origin, Accept-Encoding",
+    "x-content-type-options": "nosniff",
+    "x-dns-prefetch-control": "off",
+    "x-download-options": "noopen",
+    "x-frame-options": "SAMEORIGIN",
+    "x-ratelimit-limit": "100",
+    "x-ratelimit-remaining": "96",
+    "x-ratelimit-reset": "1782713322",
+    "x-xss-protection": "1; mode=block",
+    "cf-cache-status": "DYNAMIC",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=tyiVcc6%2BOVMyUNX1fxHUSf3Mkicyg5CgGaUw4rCb6stIiACNv28RdyZJE7%2BaT4CJDYRaR%2FOzu7M6QluBzfGHYc7YLv%2FwR052XoiXr%2BeogAemffukOUQDiAkPGYNZ3rmt\"}]}",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "content-encoding": "br",
+    "server": "cloudflare",
+    "cf-ray": "a132c1ef78417fa4-IAD"
+  },
+  "Body": {
+    "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3ODI3MTMzMTUsImV4cCI6MTc4MjcxNjkxNX0.qIZVGYnUZw1VQC3I4fmBIj7DnbUzA1BRKjSzne_Qgtc",
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3ODI3MTMzMTUsImV4cCI6MTc4NTMwNTMxNX0.fe3SSeqW_GCQmVcpPlt_MuSsa69vkME1KCAWHIjqIos"
+  }
+}
