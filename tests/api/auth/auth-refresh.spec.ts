@@ -1,6 +1,5 @@
 import { test, expect } from '@playwright/test';
 import { AuthApi } from '../../../api/AuthApi';
-import { config } from '../../../config/env';
 import refreshData from '../../../test-data/auth/refresh-data.json';
 
 /**

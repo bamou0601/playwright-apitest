@@ -1,5 +1,4 @@
 import { APIRequestContext } from '@playwright/test';
-//import { config } from '../config/env';
 import { BaseApi } from "./BaseApi";
 
 /**

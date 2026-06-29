@@ -1,7 +1,5 @@
 import { test, expect } from '@playwright/test';
 import { AuthApi } from '../../../api/AuthApi';
-import { ContentType } from "allure-js-commons";
-import * as allure from "allure-js-commons";
 import loginData from '../../../test-data/auth/login-data.json';
 
 /**

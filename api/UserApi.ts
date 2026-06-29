@@ -1,5 +1,6 @@
 import { APIRequestContext } from '@playwright/test';
 import { config } from '../config/env';
+import { BaseApi } from './BaseApi';
 
 /**
  * ユーザー関連の API 操作を提供するクラス。
@@ -7,13 +8,16 @@ import { config } from '../config/env';
  * 作成者: 馬 猛
  * 作成日: 2026/06/18
  */
-export class UserApi {
+export class UserApi extends BaseApi {
 
   /**
    * Playwright の APIRequestContext を受け取り、HTTP リクエストを実行します。
    * @param request Playwright の APIRequestContext
    */
-  constructor(private request: APIRequestContext) { }
+
+  constructor(request: APIRequestContext) {
+    super(request);
+  }
 
   /**
    * ユーザーを作成します。
@@ -24,9 +28,7 @@ export class UserApi {
     lastName: string;
     age: number;
   }) {
-    return await this.request.post(`${config.baseUrl}/users/add`, {
-      data: user,
-    });
+    return await this.post("/users/add", user);
   }
 
   /**
@@ -34,7 +36,7 @@ export class UserApi {
    * @param id 取得するユーザーの ID
    */
   async getUser(id: number) {
-    return await this.request.get(`${config.baseUrl}/users/${id}`);
+    return await this.get(`/users/${id}`);
   }
 
   /**
@@ -43,9 +45,7 @@ export class UserApi {
    * @param user 変更するユーザー情報
    */
   async updateUser(id: number, user: Object) {
-    return await this.request.put(`${config.baseUrl}/users/${id}`, {
-      data: user,
-    });
+    return await this.put(`/users/${id}`, user);
   }
 
   /**
@@ -53,6 +53,6 @@ export class UserApi {
    * @param id 削除するユーザーの ID
    */
   async deleteUser(id: number) {
-    return await this.request.delete(`${config.baseUrl}/users/${id}`);
+    return await this.delete(`/users/${id}`);
   }
 }
