@@ -1,0 +1,31 @@
+{
+  "Status": 400,
+  "StatusText": "Bad Request",
+  "Duration": "281 ms(0.28 s)",
+  "Headers": {
+    "date": "Mon, 29 Jun 2026 04:57:00 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "content-length": "33",
+    "connection": "keep-alive",
+    "access-control-allow-credentials": "true",
+    "etag": "W/\"21-dBEoW0UmTF+EGUMaprEp9/8zNNA\"",
+    "strict-transport-security": "max-age=15552000; includeSubDomains",
+    "vary": "Origin, Accept-Encoding",
+    "x-content-type-options": "nosniff",
+    "x-dns-prefetch-control": "off",
+    "x-download-options": "noopen",
+    "x-frame-options": "SAMEORIGIN",
+    "x-ratelimit-limit": "100",
+    "x-ratelimit-remaining": "98",
+    "x-ratelimit-reset": "1782709028",
+    "x-xss-protection": "1; mode=block",
+    "cf-cache-status": "DYNAMIC",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=CSiiyrP20iPMOmX%2BqMWR47d9vs%2BZt6a5eq7SzekMbiWevsWWBrb2nGl9dgLG6%2F39EatZsY%2FSBgcghnb%2B5YmFkD22BsLkN5od3K3kyMaU4vEqqbbk3zqiYnQ33fI9UuXJZNrjYOQB%2FeUp4inU\"}]}",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "server": "cloudflare",
+    "cf-ray": "a1325910f9b1deb7-NRT"
+  },
+  "Body": {
+    "message": "Invalid credentials"
+  }
+}
