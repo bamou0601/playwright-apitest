@@ -1,0 +1,12 @@
+{
+  "method": "POST",
+  "URL": "https://dummyjson.com/auth/login",
+  "Headers": {
+    "Content-Type": "application/json",
+    "Accept": "application/json"
+  },
+  "Body": {
+    "username": "wrong",
+    "password": "wrong"
+  }
+}

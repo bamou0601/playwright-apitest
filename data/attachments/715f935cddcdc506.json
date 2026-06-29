@@ -1,0 +1,8 @@
+{
+  "method": "GET",
+  "URL": "https://dummyjson.com/users/search?q=Emily",
+  "Headers": {
+    "Content-Type": "application/json",
+    "Accept": "application/json"
+  }
+}
