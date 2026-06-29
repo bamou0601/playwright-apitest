@@ -124,6 +124,7 @@ export class BaseApi {
             Body: body
         };
 
+        // - ヘッダーとボディを含めてAllureへ添付する
         await allure.step("Request", async () => {
             await allure.attachment(
                 "Request",

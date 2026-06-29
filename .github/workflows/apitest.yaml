@@ -1,9 +1,11 @@
-name: Playwright Tests
+name: Playwright APITests
 on:
   push:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
+permissions:
+  contents: write
 jobs:
   test:
     timeout-minutes: 3
@@ -29,10 +31,20 @@ jobs:
     - name: Run API tests
       run: npx playwright test
 
-    - name: Upload Playwright Report
-      if: always()
-      uses: actions/upload-artifact@v4
+    # - name: Upload Playwright Report
+    #   if: always()
+    #   uses: actions/upload-artifact@v4
+    #   with:
+    #     name: playwright-report
+    #     path: playwright-report/
+    #     retention-days: 7
+
+    - name: Generate Allure Report
+      run: npm run allure:generate
+
+    - name: Deploy Allure
+      if: github.event_name == 'push'
+      uses: peaceiris/actions-gh-pages@v4
       with:
-        name: playwright-report
-        path: playwright-report/
-        retention-days: 7
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: allure-report
