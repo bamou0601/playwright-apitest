@@ -1,5 +1,4 @@
 import { APIRequestContext } from '@playwright/test';
-import { config } from '../config/env';
 import { BaseApi } from './BaseApi';
 
 /**
@@ -55,4 +54,13 @@ export class UserApi extends BaseApi {
   async deleteUser(id: number) {
     return await this.delete(`/users/${id}`);
   }
+
+  /**
+   * 指定したのユーザーを探します。
+   * @param name 探すユーザーのname
+   */
+  async searchUser(keyword: string) {
+    return await this.get(`/users/search?q=${keyword}`);
+  }
+
 }

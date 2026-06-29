@@ -1,0 +1,31 @@
+{
+    "searchJohn": {
+        "request": {
+            "keyword": "John"
+        },
+        "expected": {
+            "status": 200,
+            "total": 3,
+            "firstUser": {
+                "lastName": "Johnson"
+            }
+        }
+    },
+    "searchEmily": {
+        "request": {
+            "keyword": "Emily"
+        },
+        "expected": {
+            "status": 200
+        }
+    },
+    "searchNotFound": {
+        "request": {
+            "keyword": "xxxxxxxx"
+        },
+        "expected": {
+            "status": 200,
+            "total": 0
+        }
+    }
+}
