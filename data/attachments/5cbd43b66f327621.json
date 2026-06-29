@@ -1,0 +1,11 @@
+{
+  "method": "POST",
+  "URL": "https://dummyjson.com/auth/refresh",
+  "Headers": {
+    "Content-Type": "application/json",
+    "Accept": "application/json"
+  },
+  "Body": {
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3ODI3MTA5MjUsImV4cCI6MTc4NTMwMjkyNX0.Kcg-GOAsj9dtHkv4p5eUfn4QML_uPooT3k9rNnJ1Jss"
+  }
+}

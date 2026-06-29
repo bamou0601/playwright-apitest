@@ -1,0 +1,13 @@
+{
+  "method": "POST",
+  "URL": "https://dummyjson.com/users/add",
+  "Headers": {
+    "Content-Type": "application/json",
+    "Accept": "application/json"
+  },
+  "Body": {
+    "firstName": "Taro",
+    "lastName": "Yamada",
+    "age": 28
+  }
+}
