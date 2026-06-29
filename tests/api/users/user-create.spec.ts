@@ -32,6 +32,7 @@ test('ユーザー作成', async ({ request }) => {
 
     console.log(body);
 
+    // レスポンスボディのアイテムを検証する
     expect(body).toHaveProperty('id');
     expect(body.firstName).toBe(createData.request.firstName);
     expect(body.lastName).toBe(createData.request.lastName);
