@@ -39,12 +39,34 @@ jobs:
     #     path: playwright-report/
     #     retention-days: 7
 
+    # 前回のAllure履歴を取得
+    - name: Checkout gh-pages
+      if: always()
+      uses: actions/checkout@v4
+      with:
+        ref: gh-pages
+        path: gh-pages
+      continue-on-error: true
+
+    # Historyを復元
+    - name: Restore Allure History
+      if: always()
+      run: |
+        if [ -d gh-pages/history ]; then
+          mkdir -p allure-results/history
+          cp -r gh-pages/history/* allure-results/history/
+        fi
+
+    # Allure Report生成
     - name: Generate Allure Report
+      if: always()
       run: npm run allure:generate
 
-    - name: Deploy Allure
+    # GitHub Pagesへ公開
+    - name: Deploy Allure Report
       if: github.event_name == 'push'
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: allure-report
+        keep_files: true
