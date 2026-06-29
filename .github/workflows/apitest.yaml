@@ -65,6 +65,11 @@ jobs:
       if: always()
       run: npm run allure:generate
 
+    - name: Save History
+      if: always()
+      run: |
+        cp -r allure-report/history gh-pages/
+
     # GitHub Pagesへ公開
     - name: Deploy Allure Report
       if: always() && github.event_name == 'push'

@@ -25,6 +25,7 @@ test('ユーザー情報取得', async ({ request }) => {
 
     const body = await response.json();
 
+    //差分チェック
     // expect(body).toMatchSnapshot(
     //     'user-1.json'
     // );
