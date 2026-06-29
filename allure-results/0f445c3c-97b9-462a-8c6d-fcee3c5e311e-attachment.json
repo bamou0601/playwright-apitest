@@ -1,0 +1,41 @@
+{
+  "Status": 200,
+  "StatusText": "OK",
+  "Duration": "489 ms(0.49 s)",
+  "Headers": {
+    "date": "Mon, 29 Jun 2026 06:57:54 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "transfer-encoding": "chunked",
+    "connection": "keep-alive",
+    "access-control-allow-credentials": "true",
+    "etag": "W/\"3a2-/FKFGtHEKNt62Oqrcl4NcIp91bE\"",
+    "set-cookie": "accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3ODI3MTYyNzQsImV4cCI6MTc4MjcxOTg3NH0.ToASVNeE4JhDcDlKR6yBv1_k95fIu9ZM7Yij-M9g21Y; Max-Age=3600; Path=/; Expires=Mon, 29 Jun 2026 07:57:54 GMT; HttpOnly; Secure\nrefreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3ODI3MTYyNzQsImV4cCI6MTc4NTMwODI3NH0.dZ3pIALhd7d1GzKu33z9tjx8cM_wAyAbnyzqTcCBfbw; Max-Age=3600; Path=/; Expires=Mon, 29 Jun 2026 07:57:54 GMT; HttpOnly; Secure",
+    "strict-transport-security": "max-age=15552000; includeSubDomains",
+    "vary": "Origin, Accept-Encoding",
+    "x-content-type-options": "nosniff",
+    "x-dns-prefetch-control": "off",
+    "x-download-options": "noopen",
+    "x-frame-options": "SAMEORIGIN",
+    "x-ratelimit-limit": "100",
+    "x-ratelimit-remaining": "99",
+    "x-ratelimit-reset": "1782716278",
+    "x-xss-protection": "1; mode=block",
+    "cf-cache-status": "DYNAMIC",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=P76KfVcDRrqaxINmbjUNZFd6XE6TLEuLU2vDkq91jnX92cEkfj9QaVfHnouvjCLBlo%2FlDzd9Zqk1%2Boe4Bs3uCRNVQIOwFySIxf6AUP%2FdsmEfB0PC68NAOZNiPGWBQJA3S4xOsAsy%2BskL%2FuGb\"}]}",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "content-encoding": "br",
+    "server": "cloudflare",
+    "cf-ray": "a1330a2958633f16-NRT"
+  },
+  "Body": {
+    "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3ODI3MTYyNzQsImV4cCI6MTc4MjcxOTg3NH0.ToASVNeE4JhDcDlKR6yBv1_k95fIu9ZM7Yij-M9g21Y",
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3ODI3MTYyNzQsImV4cCI6MTc4NTMwODI3NH0.dZ3pIALhd7d1GzKu33z9tjx8cM_wAyAbnyzqTcCBfbw",
+    "id": 1,
+    "username": "emilys",
+    "email": "emily.johnson@x.dummyjson.com",
+    "firstName": "Emily",
+    "lastName": "Johnson",
+    "gender": "female",
+    "image": "https://dummyjson.com/icon/emilys/128"
+  }
+}
